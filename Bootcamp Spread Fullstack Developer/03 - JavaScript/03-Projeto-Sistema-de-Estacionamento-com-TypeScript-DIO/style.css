@@ -7,7 +7,15 @@
 }
 
 body {
-  margin-top: 50px;
+  margin-top: 20px;
+}
+
+h1 {
+  margin: 15px 5px;
+  margin-left: 15px;
+  color: #2361e7;
+  font-size: 28px;
+  margin-bottom: 20px;
 }
 
 input,
