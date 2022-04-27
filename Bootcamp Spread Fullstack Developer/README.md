@@ -1,6 +1,6 @@
-# Repositorio de Estudo da Dio
-
 ## Bootcamp Spread Fullstack Developer
+
+![alt text](print.png)
 
 **Modulo 01** - Conteudo Inicial
 
@@ -38,18 +38,22 @@
 
 :white_check_mark: - Map, Filter e Reduce
 
-:black_square_button: - Debugging e Error Handling
+:white_check_mark: - Debugging e Error Handling
 
-:black_square_button: - Javascript Assincrono
+:white_check_mark: - Javascript Assincrono
 
-:black_square_button: - Orientação a Objetos
+:white_check_mark: - Orientação a Objetos
 
-:black_square_button: - Trabalhando com Moódulos em Javascript
+:white_check_mark: - Trabalhando com Moódulos em Javascript
 
-:black_square_button: - Manipulando a D.O.M com Javascript
+:white_check_mark: - Manipulando a D.O.M com Javascript
 
-:black_square_button: - Introdução ao Typescript
+:white_check_mark: - Introdução ao Typescript
 
-:black_square_button: - Desafio
+:white_check_mark: - Desafio
 
-:black_square_button: - Aprenda a Criar um sistema de estacionamento usando Typescript
+:white_check_mark: - Aprenda a Criar um sistema de estacionamento usando Typescript (https://github.com/Thander21/03-Projeto-Sistema-de-Estacionamento-com-TypeScript-DIO)
+
+**Modulo 04** - ReactJS
+
+:black_square_button: - Introdução a ReactJS

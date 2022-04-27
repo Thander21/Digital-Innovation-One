@@ -1,5 +1,7 @@
 ## Projeto de um sistema de estacionamento usando typescript.
 
+![alt text](print.png)
+
 **Projeto feito passo a passo**
 
 - Typescript conceito bem entendido, mas muito codigo novo e formatação nova que não foi bem assimilada.
