@@ -1,0 +1,86 @@
+/* Flexbox em linha com display flex, padrão em coluna com justify content */
+.flex {
+  max-width: 500px;
+  padding: 10px;
+  border: 2px solid black;
+  display: flex;
+  justify-content: space-between;
+}
+.flex .item {
+  background-color: aqua;
+  margin: 5px;
+}
+
+/* alinha os itens ajustando o espaço entre para poder caber */
+.align {
+  align-items: stretch;
+}
+
+/* Flexbox em linha direta e reversa */
+.flex-container {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  list-style: none;
+}
+
+.flex-item {
+  background-color: blue;
+  height: 50px;
+  width: 50px;
+  line-height: 50px;
+  font-size: 20px;
+  color: white;
+  text-align: center;
+  margin: 5px;
+}
+
+.row-inverse {
+  flex-direction: row-reverse;
+}
+.row-inverse > li {
+  background-color: red;
+}
+
+/* Flexbox em Coluna e coluna reversa */
+.column {
+  flex-direction: column;
+  float: right;
+}
+.column > li {
+  background-color: orange;
+}
+
+.column-reverse {
+  flex-direction: column-reverse;
+  float: left;
+}
+
+/* faz a quebra de linha sem compactar, padrão é nowrap e tem o wrap reverse*/
+.wrap {
+  flex-wrap: wrap;
+}
+
+/* Flex-flow, utlizar  o directon e o wrap ao mesmo tempo */
+.flex-flow {
+  flex-flow: column wrap-reverse;
+}
+
+/* 
+  Propriedades do Flexbox Conteiner
+    - display 
+    - flex-direction (row, row-reverse, column, column-reverse)
+    - flex-wrap (nowrap, wrap, wrap-reverse)
+    - flex-flow (direction + wrap)
+    - justify-content (flex-start, flex-end, center, space-between, space-around)
+    - align-items (flex-start, flex-end, center, stretch, baseline)
+    - align-content (flex-start, flex-end, center, stretch, space-between, space-around)
+  
+  Propriedades do Flexbox Item
+    - flex-grow
+    - flex shring
+    - flex basis
+    - flex (grow, shrik, basis) (1,0,auto)
+    - order
+    - align-self 
+*/
