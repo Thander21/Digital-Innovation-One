@@ -1,4 +1,5 @@
 //typescript interface
+//npx -p typescript tsc
 interface Vehicle {
   model: string;
   plate: string;
@@ -54,7 +55,8 @@ interface Vehicle {
 
     //remove uma linha e salva
     function remove(plate: string) {
-      const { entry, model } = read().find(vehicle => vehicle.plate === plate);
+      const { entry, model } =
+        read().find(vehicle => vehicle.plate === plate) || {};
 
       const time = calcTime(new Date().getTime() - new Date(entry).getTime());
 

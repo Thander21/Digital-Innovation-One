@@ -1,5 +1,3 @@
-// TODO: Melhorar o app criando um objeto para enviar dentro da função, trabalhando melhor o conceito de obj
-// adicionar o compo tempo de permanecia
 //Funçãp para cadastrar os veiculos e fazer toda movimentação no DOM
 (function () {
     var _a;
@@ -41,12 +39,12 @@
         }
         //remove uma linha e salva
         function remove(plate) {
-            const { entry, model } = read().find(alemente => alemente.plate === plate);
+            const { entry, model } = read().find(vehicle => vehicle.plate === plate) || {};
             const time = calcTime(new Date().getTime() - new Date(entry).getTime());
             if (!confirm(`O veiculo ${model} e ${plate} permaneceu por ${time}.
       Deseja Encerrar?`))
                 return;
-            save(read().filter(alemente => alemente.plate !== plate));
+            save(read().filter(vehicle => vehicle.plate !== plate));
             render();
         }
         //renderiza na tela os dados do local storage

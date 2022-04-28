@@ -14,3 +14,5 @@
 **Falha**
 
 - Botão de excluir não funcionou, apesar do cod estar ok, voltar ao projeto no futuro pra tentar corrigir.
+
+-- retorno agora aparece que os dados estão com undifined ou null, verificar função
