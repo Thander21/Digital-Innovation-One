@@ -1,6 +1,6 @@
 ## Projeto de um sistema de estacionamento usando typescript.
 
-![alt text](print.png)
+![alt text](Print.png)
 
 **Projeto feito passo a passo**
 
