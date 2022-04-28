@@ -4,7 +4,7 @@
 
 - aulas iniciais igual do bootcamp spread
 - testes de codigo bem mais simpels e executados sem dificuldade
-- aula de manipulação do Dom em pratica (executando)
+- aula geral de javascript - concluida
 
 **03 projetos de criação de pagina com javascript para pratica e portifolio**
 
