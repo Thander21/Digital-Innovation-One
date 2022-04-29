@@ -6,6 +6,31 @@
   height: 40vmin;
   pointer-events: none;
 }
+p {
+  color: #76ddfa;
+  padding: 20px;
+  background-color: #408fa5;
+  border-radius: 25px;
+}
+h3 {
+  color: #76ddfa;
+}
+
+ul {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+button {
+  padding: 15px;
+  border: none;
+  background-color: #61dafb;
+  font-size: 22px;
+  border-radius: 10px;
+  cursor: pointer;
+  margin: 10px;
+}
 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
@@ -14,7 +39,7 @@
 }
 
 .App-header {
-  background-color: #282c34;
+  background-color: #384e7e;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
