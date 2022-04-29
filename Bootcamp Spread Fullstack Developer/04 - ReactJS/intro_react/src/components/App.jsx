@@ -7,28 +7,34 @@ const hasCustomer = true;
 
 const listCustomers = [
   {
-    id: 1,
+    id: 11,
     name: 'Miguel Yusef',
+    skils: ['pt', 'xbox', 'roblox'],
   },
   {
-    id: 2,
+    id: 43,
     name: 'Milla Ohana',
+    skils: ['kids'],
   },
   {
-    id: 3,
+    id: 78,
     name: 'Ana Jessica',
+    skils: ['venda', 'atendimento'],
   },
   {
-    id: 4,
+    id: 39,
     name: 'Arthur Marinho',
+    skils: ['xbox', 'fala'],
   },
   {
-    id: 5,
+    id: 99,
     name: 'Telma Lima',
+    skils: ['fastfood', 'casa'],
   },
   {
-    id: 6,
+    id: 29,
     name: 'Antonio',
+    skils: ['pesca', 'vizinhaça'],
   },
 ];
 
@@ -41,11 +47,19 @@ function renderShowHistory() {
   return <button>Historioco do cliente</button>;
 }
 
-const renderCustomers = (customer, index) => {
+const renderCustomers = customer => {
   return (
-    <li key={index}>
-      0{index} - {customer.name}
+    <li key={`customer${customer.id}`}>
+      0{customer.id} - {customer.name}⚡{customer.skils.map(renderSkils)}
     </li>
+  );
+};
+
+const renderSkils = (skils, index) => {
+  return (
+    <div id='skils' key={`skils.${index}`}>
+      {skils}
+    </div>
   );
 };
 
