@@ -56,11 +56,7 @@ const renderCustomers = customer => {
 };
 
 const renderSkils = (skils, index) => {
-  return (
-    <div id='skils' key={`skils.${index}`}>
-      {skils}
-    </div>
-  );
+  return <div id='skils'>- {skils}</div>;
 };
 
 //funçção principal que renderiza os components na pagina
