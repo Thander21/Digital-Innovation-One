@@ -1,42 +1,11 @@
+import listCustomers from '../components/listCustomers';
 import '../styles/App.css';
 
-const buttonB = <button>Limpar</button>;
-const renderAddCustomer = <button>Cadastrar Cliente</button>;
-const custumer = 'Rahman Brussolo';
-const hasCustomer = true;
+let hasCustomer = false;
 
-const listCustomers = [
-  {
-    id: 11,
-    name: 'Miguel Yusef',
-    skils: ['pt', 'xbox', 'roblox'],
-  },
-  {
-    id: 43,
-    name: 'Milla Ohana',
-    skils: ['kids'],
-  },
-  {
-    id: 78,
-    name: 'Ana Jessica',
-    skils: ['venda', 'atendimento'],
-  },
-  {
-    id: 39,
-    name: 'Arthur Marinho',
-    skils: ['xbox', 'fala'],
-  },
-  {
-    id: 99,
-    name: 'Telma Lima',
-    skils: ['fastfood', 'casa'],
-  },
-  {
-    id: 29,
-    name: 'Antonio',
-    skils: ['pesca', 'vizinhaça'],
-  },
-];
+const buttonClean = <button>Limpar</button>;
+
+const custumer = 'Rahman Brussolo';
 
 const showCustomer = () => {
   if (!hasCustomer) return null;
@@ -46,6 +15,14 @@ const showCustomer = () => {
 function renderShowHistory() {
   return <button>Historioco do cliente</button>;
 }
+
+const renderShowCustomer = () => {
+  hasCustomer = true;
+};
+
+const buttonShowCustomer = (
+  <button onClick={renderShowCustomer}>Mostar Cliente</button>
+);
 
 const renderCustomers = customer => {
   return (
@@ -67,8 +44,8 @@ function App() {
         <p>Meu primeiro app React By Rahman Brussolo</p>
         {showCustomer()}
         <div className='butons'>
-          {hasCustomer ? renderShowHistory() : renderAddCustomer}
-          {hasCustomer && buttonB}
+          {hasCustomer ? renderShowHistory() : buttonShowCustomer}
+          {hasCustomer && buttonClean}
         </div>
         <ul>{listCustomers.map(renderCustomers)}</ul>
       </header>
