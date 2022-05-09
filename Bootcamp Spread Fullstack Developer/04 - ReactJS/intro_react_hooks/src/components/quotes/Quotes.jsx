@@ -1,14 +1,14 @@
 import styled from 'styled-components';
-import { string } from 'prop-types';
+import { string, func } from 'prop-types';
 import { Button } from '../button/Button';
 
-export const Quotes = ({ quote, speaker }) => {
+export const Quotes = ({ quote, speaker, onUpdate }) => {
   return (
     <Wrapper>
       <p>"frases aleatorias pegas por api"</p>
       <Quote>{quote}</Quote>
       <Speaker>{speaker}</Speaker>
-      <Button>Frase No Jutsu</Button>
+      <Button onClick={onUpdate}>Frase No Jutsu</Button>
     </Wrapper>
   );
 };
@@ -16,6 +16,7 @@ export const Quotes = ({ quote, speaker }) => {
 Quotes.propTypes = {
   quote: string,
   speaker: string,
+  onUpdate: func,
 };
 
 const Wrapper = styled.div`

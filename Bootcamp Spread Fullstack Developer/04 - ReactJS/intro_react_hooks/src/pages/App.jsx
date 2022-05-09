@@ -3,11 +3,16 @@ import styled from 'styled-components';
 import narutoImg from '../images/naruto.png';
 import { Quotes } from '../components/quotes/Quotes';
 import backgroundImg from '../images/bg.jpeg';
+import { getQuote } from '../services/quotesServices/QuotesServices';
 
 function App() {
+  const onUpdate = async () => {
+    const quote = await getQuote();
+  };
+
   return (
     <Content>
-      <Quotes quote={'ok'} speaker={'Speaker'} />
+      <Quotes quote={'ok'} speaker={'Speaker'} onUpdate={onUpdate} />
       <NarutoImg src={narutoImg} alt='naruto com uma kunai' />
     </Content>
   );
