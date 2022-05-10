@@ -1,6 +1,6 @@
-##Bootcamp Spread Fullstack Developer
+## Bootcamp Spread Fullstack Developer
 
-####React Rest Http
+#### React Rest Http
 
 Projeto para Ler uma api e retornar uma lista de pessoas
 
