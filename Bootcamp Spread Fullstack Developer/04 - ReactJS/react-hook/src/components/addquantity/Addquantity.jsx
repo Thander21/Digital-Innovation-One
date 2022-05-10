@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import styled from 'styled-components';
 
 export function AddQuantity() {
-  const [quantity, setValue] = useState(0);
+  const [quantity, setQuantity] = useState(0);
   const [buttonZero, setButtonZero] = useState('#a8a8a876');
   const coin = 0;
 
@@ -10,19 +10,13 @@ export function AddQuantity() {
     document.getElementById('coin').innerHTML = 2.5 * quantity;
   }, [quantity]);
 
-  const ButtonMinus = styled.button`
-    padding: 0 20px;
-    background: none;
-    border: none;
-    font-weight: 700;
-    font-size: 30px;
-    cursor: pointer;
+  const ButtonMinus = styled(Button)`
     color: ${buttonZero};
   `;
 
   function decrease() {
     if (quantity > 0) {
-      setValue(quantity - 1);
+      setQuantity(quantity - 1);
     }
 
     if (quantity < 2) {
@@ -31,7 +25,7 @@ export function AddQuantity() {
   }
 
   function increase() {
-    setValue(quantity + 1);
+    setQuantity(quantity + 1);
     setButtonZero('red');
   }
 
@@ -41,11 +35,11 @@ export function AddQuantity() {
         <ButtonMinus onClick={decrease}>-</ButtonMinus>
         <p>{quantity}</p>
         <ButtonAdd onClick={increase}>+</ButtonAdd>
+        <Button onClick={() => setQuantity(0)}>Limpar</Button>
       </Content>
       <StyledCoin>
         <p>Valor R$ </p>
         <p id='coin'>${coin}</p>
-        <ButtonAdd onClick={() => setButtonZero(0)}>Limpar</ButtonAdd>
       </StyledCoin>
     </>
   );
@@ -60,13 +54,16 @@ const Content = styled.div`
   border: 3px solid #a8a8a876;
 `;
 
-const ButtonAdd = styled.button`
+const Button = styled.button`
   padding: 0 20px;
   background: none;
   border: none;
   font-weight: 700;
   font-size: 30px;
   cursor: pointer;
+`;
+
+const ButtonAdd = styled(Button)`
   color: blue;
 `;
 
